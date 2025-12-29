@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: order-API-Service
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#for Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
